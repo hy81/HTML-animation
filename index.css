@@ -1,0 +1,147 @@
+body { margin: 0; padding: 0; }
+
+.background {
+  background-image: url("images/super-mario/background-little.jpg");
+  width: 100%;
+  height: 1108px;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  background-repeat: no-repeat;
+
+}
+
+.enemy { animation: walk 10s steps(1000) infinite forwards;}
+
+.mario { animation: move 7s steps(1000) infinite forwards, jump 1.5s steps(1000) infinite forwards;}
+
+.small-cloud {animation: slide-left 10s steps(1000) infinite forwards, down-up 8s steps(1000) infinite forwards;}
+
+.big-cloud { animation: slide-left 5s steps(1000) infinite forwards, down-up 10s steps(1000) infinite forwards;}
+
+.sun { animation: sun 1.25s steps(4) infinite forwards; }
+
+.mushroom { animation: mushroom-move 7s steps(1000) infinite forwards; }
+
+@keyframes mushroom-move {
+  0% { top: 400px; margin-left: 1020px; }
+  10% { top: 333px; margin-left: 1020px; }
+  20% { top: 333px; margin-left: 950px; }
+  35% { top: 595px; margin-left: 950px; }
+  45% { top: 595px; margin-left: 825px; }
+  60% { top: 850px; margin-left: 825px; }
+  100% { top: 850px; margin-left: 0px; }
+}
+
+@keyframes sun {
+  100% {background-position: -1300px 0px;}
+}
+
+@keyframes walk {
+  100% { margin-right: 2500px;}
+}
+
+@keyframes move {
+  100% { margin-left: 1750px;}
+}
+
+@keyframes jump {
+  50% { bottom: 240px; }
+  100% { bottom: 180px; }
+}
+
+@keyframes slide-left {
+  100% { margin-right: 2048px; }
+}
+
+@keyframes down-up {
+  50% { margin-top: 300px;}
+  100% { margin-top: 150px; }
+}
+
+.enemy {
+  background-image: url("images/super-mario/enemy.png");
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  bottom: 190px;
+  right: 0;
+  margin-right: -175px;
+}
+
+.mario {
+  background-image: url("images/super-mario/mario.png");
+  width: 111px;
+  height: 153px;
+  position: absolute;
+  bottom: 180px;
+  margin-left: -175px;
+}
+
+.small-cloud {
+  background-image: url("images/super-mario/small-cloud.png");
+  width: 204px;
+  height: 156px;
+  top: 0;
+  right: 0;
+  position: absolute;
+  margin-right: -180px;
+}
+
+.big-cloud {
+  background-image: url("images/super-mario/big-cloud.png");
+  width: 301px;
+  height: 113px;
+  top: 0;
+  right: 0;
+  position: absolute;
+  margin-right: -302px;
+}
+
+.small-bush {
+  background-image: url("images/super-mario/small-bush.png");
+  width: 150px;
+  height: 75px;
+  position: absolute;
+  bottom: 190px;
+  margin-left: 700px;
+}
+
+.small-hill{
+  background-image: url("images/super-mario/small-hill.png");
+  width: 96px;
+  height: 38px;
+  position: absolute;
+  bottom: 190px;
+  margin-left: 150px;
+}
+
+.sun {
+  background-image: url("images/super-mario/sun.png");
+  width: 325px;
+  height: 342px;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.mushroom {
+  background-image: url("images/super-mario/mushroom.png");
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: 400px;
+  margin-left:  1020px;
+  transform: scale(0.8);
+  z-index: 5;
+}
+
+.coin-block {
+  background-image: url("images/super-mario/question-block.png");
+  width: 75px;
+  height: 75px;
+  position: absolute;
+  top: 400px;
+  margin-left:  1020px;
+    z-index: 6;
+}
